@@ -1,0 +1,6 @@
+<span [innerHTML]="'app.option.vip.main.alert.text-1' | translate:{status:applicationService.vipText(), date:applicationService.vipDate | date:'dd MMMM yyyy'}"></span>
+
+<br/>
+<br/>
+
+<i>{{'app.option.vip.main.alert.text-2' | translate}} <a href="" (click)="goDiscord($event)">Discord</a></i>

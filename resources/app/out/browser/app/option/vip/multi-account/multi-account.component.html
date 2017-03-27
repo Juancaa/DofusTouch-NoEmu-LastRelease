@@ -1,0 +1,112 @@
+<ng-container *ngIf="applicationService.vipStatus >= 2">
+
+    <ng-container *ngIf="!hasPassword()">
+
+        <div>
+            {{'app.option.vip.multi-account.home-no-master' | translate}}
+        </div>
+
+        <br>
+
+        <button class="btn btn-primary flat" (click)="setMasterPassword()">{{'app.option.vip.multi-account.configure_password' | translate}}</button>
+
+    </ng-container>
+
+    <ng-container *ngIf="hasPassword()">
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-check">
+                    <div class="checkbox checkbox-primary">
+                        <input type="checkbox" id="setting-service-option-vip-multiaccount-active" [(ngModel)]="settingsService.option.vip.multiaccount.active">
+                        <label for="setting-service-option-vip-multiaccount-active">{{ 'app.option.vip.multi-account.active' | translate}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <span *ngIf="hasPassword() && !applicationService.masterpassword" class="pull-right text-primary pointer" (click)="updateMasterPassword()">
+                        {{'app.option.vip.multi-account.modify_password' | translate}}
+                    </span>
+            </div>
+        </div>
+    </ng-container>
+
+    <div class="request-master-password" *ngIf="hasPassword() && settingsService.option.vip.multiaccount.active && !applicationService.masterpassword">
+
+        {{'app.option.vip.multi-account.request-master-password.explanation' | translate}}
+
+        <br/><br/>
+
+        <form>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group" [class.has-danger]="inputCheckMasterPasswordError">
+                        <label for="input-check-master-password">{{'app.option.vip.multi-account.request-master-password.label' | translate}}</label>
+                        <input type="password" class="form-control" autofocus name="inputCheckMasterPassword" [class.form-control-danger]="inputCheckMasterPasswordError"
+                            [(ngModel)]="inputCheckMasterPassword">
+                        <div *ngIf="inputCheckMasterPasswordError" class="form-control-feedback">{{'app.option.vip.multi-account.request-master-password.bad' | translate}}</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary flat" (click)="checkMasterPassword()">
+                            {{'app.option.vip.multi-account.request-master-password.confirm' | translate}}
+                        </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div *ngIf="hasPassword() && settingsService.option.vip.multiaccount.active && applicationService.masterpassword">
+
+        <div class="row">
+            <div class="col-6" *ngFor="let window of windows; let windowIndex = index">
+
+                <div class="window">
+                    <div class="header">
+
+                        <span class="pull-left title">
+                                {{ 'app.option.vip.multi-account.window' | translate}}<strong> {{windowIndex + 1}}</strong>
+                            </span>
+
+                        <a href="javascript:void(0)" class="actions text-danger" (click)="deleteWindow(windowIndex)">
+                            <i class="fa fa-window-close"></i>
+                        </a>
+                    </div>
+
+                    <div class="body">
+
+                        <div class="list-group">
+
+                            <div *ngFor="let account of window; let accountIndex = index">
+
+                                <div class="list-group-item list-group-item-action pointer" (click)="modifyAccount(windowIndex, accountIndex, account.account_name_encrypted)">
+                                    <div class="name">{{crypt.decrypt(account.account_name_encrypted, applicationService.masterpassword)}}</div>
+                                    <div class="actions">
+                                        <a class="text-primary edit-account" (click)="modifyAccount(windowIndex, accountIndex, account.account_name_encrypted)">
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="text-danger delete-account" (click)="deleteAccount(windowIndex, accountIndex)">
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="javascript:void(0)" class="text-primary pull-right add-account" (click)="addAccount(windowIndex)">
+                                        {{'app.option.vip.multi-account.add' | translate}}
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 text-center">
+                <button class="btn btn-primary flat" (click)="addWindow()">{{'app.option.vip.multi-account.add-window' | translate}}</button>
+            </div>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,17 @@
+.btn{
+    cursor: pointer;
+    outline:none;
+}
+
+button, .btn{
+
+    &.spacing-left{
+        margin-left: 10px;
+    }
+
+    &:active,
+    &:focus{
+        box-shadow: none;
+        outline:none !important;
+    }
+}

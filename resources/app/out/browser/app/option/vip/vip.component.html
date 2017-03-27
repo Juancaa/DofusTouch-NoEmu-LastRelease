@@ -1,0 +1,84 @@
+<div class="row">
+    <div class="col-12">
+
+        <template [ngTemplateOutlet]="getTemplate()"></template>
+
+        <template #authentication>
+
+            <p>{{'app.option.vip.main.explanation' | translate }} <a href="#" (click)="goTipeee($event)">Tipeee</a>.</p>
+
+            {{'app.option.vip.authentication.already-donator' | translate }}
+            <br/>
+
+            <button type="button" class="btn btn-primary flat" (click)="requestVipId()">{{'app.option.vip.authentication.open-prompt' | translate }}</button>
+
+            <hr/>
+
+            <strong>{{'app.option.vip.main.features.title' | translate }}</strong>
+            <ul>
+                <li>{{'app.option.vip.main.features.auto-group.title' | translate }}</li>
+                <ul>
+                    <li>{{'app.option.vip.main.features.auto-group.feature-1' | translate }}</li>
+                    <li>{{'app.option.vip.main.features.auto-group.feature-2' | translate }}</li>
+                    <li>{{'app.option.vip.main.features.auto-group.feature-3' | translate }}t</li>
+                    <li>{{'app.option.vip.main.features.auto-group.feature-4' | translate }}</li>
+                </ul>
+                <li>{{'app.option.vip.main.features.inactivity.title' | translate }}</li>
+                <li>{{'app.option.vip.main.features.health-bar.title' | translate }}</li>
+                <li>{{'app.option.vip.main.features.estimator.title' | translate }}</li>
+                <li>{{'app.option.vip.main.features.multi-account.title' | translate }}</li>
+            </ul>
+
+            <div hidden="true">
+                <router-outlet></router-outlet>
+            </div>
+        </template>
+
+        <template #main>
+            <ul class="nav nav-tabs" fxFlex>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/option/vip/general" routerLinkActive="active">{{ 'app.option.vip.general.header' | translate }}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/option/vip/auto-group" routerLinkActive="active">{{ 'app.option.vip.auto-group.header' | translate }}</a>
+                </li>
+
+                <ng-container *ngIf="applicationService.vipStatus >= 2">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/option/vip/multi-account" routerLinkActive="active">{{ 'app.option.vip.multi-account.header' | translate }}</a>
+                    </li>
+                </ng-container>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/option/vip/status" routerLinkActive="active">{{ 'app.option.vip.status.header' | translate }}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <router-outlet></router-outlet>
+            </div>
+        </template>
+
+        <template #modal let-c="close" let-d="dismiss">
+            <div class="modal-header">
+                <h4 class="modal-title">{{ 'app.main.tipeee.title' | translate }}</h4>
+                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    Hellooooo
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="tipeee()">{{ 'app.main.tipeee.link' | translate }}
+        </button>
+                <button type="button" class="btn btn-secondary" (click)="c('Close click')">{{ 'app.main.tipeee.close' |
+            translate }}
+        </button>
+            </div>
+        </template>
+    </div>
+</div>

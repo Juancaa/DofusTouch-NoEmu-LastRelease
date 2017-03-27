@@ -1,0 +1,88 @@
+<ng-container *ngIf="applicationService.vipStatus >= 2">
+
+    <div class="row">
+        <div class="col-6">
+            <div class="form-check">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-service-option-vip-autogroup-active" [(ngModel)]="settingsService.option.vip.autogroup.active">
+                    <label for="setting-service-option-vip-autogroup-active">{{ 'app.option.vip.auto-group.active' | translate }}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ng-container *ngIf="settingsService.option.vip.autogroup.active">
+
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-12">
+                <strong>{{ 'app.option.vip.auto-group.warning' | translate }}</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="leader"> {{ 'app.option.vip.auto-group.leader' | translate }}</label>
+                    <input type="text" class="form-control" id="leader" [(ngModel)]="settingsService.option.vip.autogroup.leader">
+                </div>
+            </div>
+
+            <div class="col-8">
+                <div class="form-group">
+                    <label for="members">{{ 'app.option.vip.auto-group.members' | translate }} <i class="fa fa-question-circle text-primary" title="{{ 'app.option.vip.auto-group.explanation-1' | translate }}"></i></label>
+                    <tag-input [model]="groupMembers" placeholder="{{ 'app.option.vip.auto-group.members-add' | translate }}" (tagsChanged)="onMemberListUpdate($event)"></tag-input>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="row">
+
+                    <div class="col-12">
+                        <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="app-option-vip-auto-group-ready" [(ngModel)]="settingsService.option.vip.autogroup.ready">
+                            <label for="app-option-vip-auto-group-ready">{{'app.option.vip.auto-group.ready' | translate }}</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="app-option-vip-auto-group-fight" [(ngModel)]="settingsService.option.vip.autogroup.fight">
+                            <label for="app-option-vip-auto-group-fight">{{'app.option.vip.auto-group.fight' | translate }}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="app-option-vip-auto-group-follow-leader" [(ngModel)]="settingsService.option.vip.autogroup.follow_leader">
+                            <label for="app-option-vip-auto-group-follow-leader">{{'app.option.vip.auto-group.follow-leader' | translate }} <i class="fa fa-question-circle text-primary" title="{{ 'app.option.vip.auto-group.explanation-2' | translate }} "></i></label>
+                        </div>
+                    </div>
+
+                    <ng-container *ngIf="settingsService.option.vip.autogroup.follow_leader">
+
+                        <div class="col-12">
+                            <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="app-option-vip-auto-group-random-move" [(ngModel)]="settingsService.option.vip.autogroup.random_move">
+                                <label for="app-option-vip-auto-group-random-move">{{'app.option.vip.auto-group.random-move' | translate }}</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="delay inline">{{ 'app.option.vip.auto-group.delay' | translate }}</label>
+                                <input type="number" id="delay" class="form-control" [(ngModel)]="settingsService.option.vip.autogroup.delay">
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</ng-container>
