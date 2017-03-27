@@ -1,0 +1,42 @@
+.nav-link{
+    border-radius: 0px;
+}
+
+.option-container{
+    position: relative;
+    border-top: 1px solid #d9d9d9;
+    overflow: auto;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.option-container .option-content{
+    padding-left: 193px;
+}
+
+.sidebar{
+    position: fixed;
+    width: 193px;
+    top: 1px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #eee;
+}
+
+.tab-content{
+    padding: 10px 15px 10px 15px;
+}
+
+.option-window-btn-group{
+    position: relative;
+    padding: 0px 10px 10px 10px;
+}
+
+.option-window-btn-group .btn{
+    width:100%;
+    margin-bottom: 5px;
+}

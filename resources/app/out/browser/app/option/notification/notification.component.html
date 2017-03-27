@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-12">
+
+        <p>{{ 'app.option.notifications.description' | translate }} </p>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-option-notification-fight-turn" [(ngModel)]="settingsService.option.notification.fight_turn">
+                    <label for="setting-option-notification-fight-turn">{{ 'app.option.notifications.fight-turn' | translate }}</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-option-notification-private-message" [(ngModel)]="settingsService.option.notification.private_message">
+                    <label for="setting-option-notification-private-message">{{ 'app.option.notifications.private-message' | translate }}</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-option-notification-tax-collector" [(ngModel)]="settingsService.option.notification.tax_collector">
+                    <label for="setting-option-notification-tax-collector">{{ 'app.option.notifications.tax-collector' | translate }}</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-option-notification-kolizeum" [(ngModel)]="settingsService.option.notification.kolizeum">
+                    <label for="setting-option-notification-kolizeum">{{ 'app.option.notifications.kolizeum' | translate }}</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-option-notification-party-invitation" [(ngModel)]="settingsService.option.notification.party_invitation">
+                    <label for="setting-option-notification-party-invitation">{{ 'app.option.notifications.party-invitation' | translate }}</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-option-notification-party-aggression" [(ngModel)]="settingsService.option.notification.aggression">
+                    <label for="setting-option-notification-party-aggression">{{ 'app.option.notifications.aggression' | translate }}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

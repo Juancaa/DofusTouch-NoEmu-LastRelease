@@ -1,0 +1,36 @@
+<div class="option-container">
+
+    <div class="option-side-left">
+        <nav class="sidebar bg-faded">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/option/general" routerLinkActive="active">{{ 'app.option.general.title' | translate }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/option/shortcuts" routerLinkActive="active">{{ 'app.option.shortcuts.title' | translate }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/option/notification" routerLinkActive="active">{{ 'app.option.notifications.title' | translate }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/option/vip" routerLinkActive="active">{{ 'app.option.vip.title' | translate }}</a>
+                </li>
+            </ul>
+
+            <hr/>
+
+            <div class="option-window-btn-group">
+                <button type="button" class="btn btn-danger flat" id="reset" (click)="reset()">{{ 'app.option.reset' | translate }}</button>
+                <button type="button" class="btn btn-success flat" id="validate" (click)="validate()">{{ 'app.option.save' | translate }}</button>
+            </div>
+        </nav>
+    </div>
+
+    <div id="content" class="option-content">
+        <div class="tab-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+<template ngbModalContainer></template>

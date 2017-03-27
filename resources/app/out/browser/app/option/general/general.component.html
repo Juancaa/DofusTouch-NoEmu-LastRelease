@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-12">
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="language">{{ 'app.option.general.language' | translate }}</label>
+                    <select id="language" class="form-control" [(ngModel)]="_language" (change)="setLanguage($event.target.value)">
+                    <option *ngFor="let l of languages" [value]="l.value">{{l.name}}</option>
+            </select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="resolution">{{ 'app.option.general.resolution' | translate}}</label>
+                    <select id="resolution" class="form-control" [(ngModel)]="_resolution" (change)="setResolution($event.target.value)">
+                        <option *ngFor="let r of resolutions" [value]="r.value">{{r.name}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input id="setting-option-general-hidden-shop" type="checkbox" [(ngModel)]="settingsService.option.general.hidden_shop">
+                    <label for="setting-option-general-hidden-shop">{{ 'app.option.general.hide-shop' | translate }}</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-option-general-hidden-tabs" [(ngModel)]="settingsService.option.general.hidden_tabs">
+                    <label for="setting-option-general-hidden-tabs">{{'app.option.general.hide-tab' | translate }}</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-option-general-focus-fight-turn" [(ngModel)]="settingsService.option.notification.focus_fight_turn">
+                    <label for="setting-option-general-focus-fight-turn">{{'app.option.general.focus-fight-turn' | translate }}</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="checkbox checkbox-primary">
+                    <input type="checkbox" id="setting-option-general-local-content" [(ngModel)]="settingsService.option.general.local_content">
+                    <label for="setting-option-general-local-content"><span [innerHTML]="'app.option.general.local-content' | translate"></span></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

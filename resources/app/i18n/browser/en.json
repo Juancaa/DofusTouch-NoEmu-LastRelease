@@ -1,0 +1,275 @@
+{
+  "app": {
+    "main": {
+      "tipeee": {
+        "title": "Join the No-Emu project!",
+        "close": "Close",
+        "link": "Go on our lovely Tipeee"
+      },
+      "tab-title": "Not connected",
+      "prompt": {
+        "tabs-overflow": {
+          "text": "No-emu does'nt support more than 6 tab per window, above that it can be laggy and buggy. But you can open a new window and it will be working just fine."
+        }
+      }
+    },
+    "notifications": {
+      "fight-turn": "Starting turn for {{character}}",
+      "private-message": "Incoming message from {{character}}",
+      "tax-collector": "A tax collector is being attacked !",
+      "kolizeum": "A Kolizeum has been find !",
+      "party-invitation": "You are invited to join {{character}}'s group.",
+      "aggression": "You have been aggressed !"
+    },
+    "window": {
+      "changelog": {
+        "title": "Release notes"
+      }
+    },
+    "option": {
+      "vip": {
+        "title": "VIP",
+        "main": {
+          "alert": {
+            "text-1": "You currently benefit from the <strong>{{status}}</strong> counterpart.<br/>The expiration date is {{date}}.",
+            "text-2": "If you have any questions do not hesitate to go on our "
+          },
+          "explanation": "Only Tipeur (donors) have the right to access to the VIP features, to make a donation go on our ",
+          "features": {
+            "title": "List of features :",
+            "auto-group": {
+              "title": "Auto-Group (Wabbit or +)",
+              "feature-1": "Follow the leader automatically",
+              "feature-2": "Group creation automatically",
+              "feature-3": "Join a group fight automatically",
+              "feature-4": "Skip \"ready \" in battle automatically"
+            },
+            "inactivity": {
+              "title": "Extension of idle time before disconnection (Wabbit or +)"
+            },
+            "estimator": {
+              "title": "Estimator of spell damage in battle (Wabbit or +)"
+            },
+            "health-bar": {
+              "title": "Displaying the life bars below the fighters (Grand Pa Wabbit or +)"
+            },
+            "multi-account": {
+              "title": "Possibilité d'enregistrer ces comptes par fenêtre et onglet avec connexion automatique (Grand Pa Wabbit ou +)"
+            }
+          }
+        },
+        "authentication": {
+          "open-prompt": "Activate my VIP space",
+          "already-donator": "Are you already a donor?",
+          "prompt": {
+            "title": {
+              "write-code": "Enter your VIP code",
+              "error": "Invalid VIP Code",
+              "success": "Thank you very much !"
+            },
+            "button": {
+              "send-code": "Send",
+              "cancel": "Cancel",
+              "stand-here": "Stay here",
+              "reboot": "Restart now"
+            },
+            "text": {
+              "empty-code": "You have to enter a code!",
+              "bad-code": "The entered code is not a valid code.",
+              "success": "<br/>Your VIP account <b>{{value1}}</b> has been activated ! <br/><br/>You must restart the application to take advantage of the new features."
+            }
+          }
+        },
+        "general": {
+          "header": "General",
+          "disable-inactivity": "Extended deadline for disconnection for inactivity",
+          "health-bar": "Activate the display of the life bars below the fighters",
+          "health-bar-shortcut": "Shortcuts show/hide life bars",
+          "estimator": "Enable Estimating Spell Damage in battle"
+        },
+        "auto-group": {
+          "header": "Group auto",
+          "active": "Enable automatic grouping",
+          "warning": "Beware, auto grouping can be considered as a bot for other players, use it in moderation and in unpopulated areas.",
+          "explanation-1": "The characters in the group must be friends with the leader so that the invitation is automatic.",
+          "explanation-2": "The members follow the leader if the latter is on the same map.",
+          "leader": "Name of leader",
+          "members": "Names of characters",
+          "members-add": "Add a character",
+          "follow-leader": "Follow the leader",
+          "ready": "Auto-ready",
+          "fight": "Automatic battle entry",
+          "delay": "Time to follow (in seconds)",
+          "random-move": "Moving to adjacent squares"
+        },
+        "multi-account": {
+          "home-no-master": "To use this feature, a password must be configured. It will be used to start DofusTouchNE with multi-account automation.",
+          "header": "Multi accounts",
+          "active": "Enable multi accounts",
+          "window": "Window",
+          "delete-window": "Delete",
+          "add-window": "Add a window",
+          "add": "Add an account",
+          "account-name": "Username",
+          "password": "Password",
+          "modify_password": "Change the password",
+          "configure_password": "Setting password",
+          "request-master-password": {
+            "explanation": "To access your account management, you must first enter your master password. This password was set on the first activation of the multi-account.",
+            "label": "Enter your password",
+            "bad": "The password is incorrect",
+            "confirm": "Carry on",
+            "ignore-step": "Skip this step"
+          },
+          "prompt": {
+            "add-master": {
+              "title": "Setting the Password",
+              "confirm": "Save",
+              "cancel": "Cancel",
+              "min-lenght": "The password must contain at least {{lenght}} characters",
+              "success-text": "The password will now be used to start the application."
+            },
+            "edit-master": {
+              "title": "Changing the password",
+              "input-old-placeholder": "Old password",
+              "input-new-placeholder": "New password",
+              "confirm": "Save",
+              "cancel": "Cancel",
+              "min-lenght": "The new password must contain at least {{lenght}} characters",
+              "incorrect-old": "The old password is incorrect",
+              "success-text": "The password has been changed."
+            },
+            "maximum-account": {
+              "title": "Oops!",
+              "text": "You can not save more than 4 accounts with Wabbit donor rank.",
+              "confirm": "Increase my VIP rank",
+              "cancel": "I understood"
+            },
+            "add-account": {
+              "title": "Adding an account",
+              "input-login-placeholder": "Username",
+              "input-password-placeholder": "Password",
+              "confirm": "Save",
+              "cancel": "Cancel",
+              "min-lenght-login": "The username must contain at least 1 character",
+              "min-lenght-password": "The password must contain at least 1 character"
+            },
+            "edit-account": {
+              "title": "Changing an account",
+              "input-login-placeholder": "Username",
+              "input-password-placeholder": "Password",
+              "confirm": "Save",
+              "cancel": "Cancel",
+              "min-lenght-login": "The username must contain at least 1 character",
+              "min-lenght-password": "The password must contain at least 1 character"
+            }
+          }
+        },
+        "status": {
+          "header": "VIP Status"
+        }
+      },
+      "general": {
+        "title": "General",
+        "language": "Language",
+        "resolution": "Window resolution",
+        "hide-shop": "Hide the Shop button",
+        "hide-tab": "Hide the multi-account tab bar",
+        "focus-fight-turn": "Automatically switch to an account when its turn starts",
+        "local-content": "Enable local map download (beta)"
+      },
+      "shortcuts": {
+        "title": "Shortcuts",
+        "description1": "You can use special keys: <strong>ctrl</strong>, <strong>shift</strong>, <strong>space</strong>, <strong>alt</strong> (ctrl = cmd on Macintosh OS X)",
+        "description2": "You can specify your shortcut by pressing the desired keys at the same time after selecting the input",
+        "diver": {
+          "header": "Miscellaneous",
+          "end-turn": "End your turn (fight)",
+          "open-chat": "Open the chat"
+        },
+        "interfaces": {
+          "header": "Interfaces",
+          "carac": "Character",
+          "spell": "Spells",
+          "bag": "Inventory",
+          "bidhouse": "Market place",
+          "map": "Map",
+          "friend": "Friends",
+          "book": "Quests",
+          "guild": "Guild",
+          "conquest": "Kolizeum",
+          "goultine": "Shop",
+          "job": "Jobs",
+          "alliance": "Alliance",
+          "mount": "Mount",
+          "directory": "List of Guilds and Alliances",
+          "alignement": "Alignment",
+          "bestiary": "Bestiary",
+          "title": "Titles and Ornaments",
+          "achievement": "Achievements",
+          "almanax": "Almanax",
+          "spouse": "Spouse",
+          "shop": "Shopkeeper"
+        },
+        "items": {
+          "header": "Items",
+          "slot": "Slot {{x}}"
+        },
+        "no-emu": {
+          "header": "No-Emu",
+          "new-window": "New window",
+          "new-tab": "New tab",
+          "tab": "Tab {{x}}",
+          "next-tab": "Next tab",
+          "prev-tab": "Previous tab"
+        },
+        "spells": {
+          "header": "Spells",
+          "slot": "Slot {{x}}"
+        }
+      },
+      "notifications": {
+        "title": "Notifications",
+        "description": "You can receive notifications from the game when the application is on the background. You will be notified:",
+        "fight-turn": "When your turn starts (fight)",
+        "private-message": "By incoming private messages",
+        "tax-collector": "When a tax collector is attacked",
+        "kolizeum": "When kolizeum fight is find",
+        "party-invitation": "When someone invites you to join a group",
+        "aggression": "When someone aggresses you"
+      },
+      "reset": "Reset",
+      "save": "Apply",
+      "prompt": {
+        "reset-option": {
+          "text": "By continuing, all parameters will be reset.<br/>This operation is not reversible."
+        },
+        "change-resolution": {
+          "text": "The new resolution will be applied during the next reboot."
+        }
+      }
+    },
+    "prompt": {
+      "title": {
+        "confirm": "Confirmation required",
+        "warning": "Warning !",
+        "success": "Successful operation !",
+        "error": "Operation failed !",
+        "info": "Information"
+      },
+      "button": {
+        "cancel": "Cancel",
+        "confirm": "I confirm",
+        "close": "Close"
+      }
+    }
+  },
+  "update": {
+    "title": "Update",
+    "information": {
+      "error": "Can't download the update ! Please try again later",
+      "install": "Installing the update...",
+      "start": "Starting download..."
+    }
+  }
+}

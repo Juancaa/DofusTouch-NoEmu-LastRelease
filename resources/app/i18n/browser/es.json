@@ -1,0 +1,270 @@
+{
+  "app": {
+    "main": {
+      "tipeee": {
+        "title": "Apoyas al proyecto No-Emu !",
+        "close": "Cerrar",
+        "link": "Ir a nuestro Tipeee"
+      },
+      "tab-title": "non conectado",
+      "prompt": {
+        "tabs-overflow": {
+          "text": "No-emu does'nt support more than 6 tab per window, above that it can be laggy and buggy. But you can open a new window and it will be working just fine."
+        }
+      }
+    },
+    "notifications": {
+      "fight-turn": "Inicio del torno de {{character}}",
+      "private-message": "Message de {{character}}",
+      "tax-collector": "A tax collector is attacked!",
+      "kolizeum": "A Kolizeum has been find !"
+    },
+    "window": {
+      "changelog": {
+        "title": "Actualizar notas"
+      }
+    },
+    "option": {
+      "vip": {
+        "title": "VIP",
+        "main": {
+          "alert": {
+            "text-1": "Actualmente se benefició de la contra-parte <strong>{{status}}</strong>.<br/>La fecha de caducidad es de {{date}}",
+            "text-2": "Si tu as des questions n'hésites pas à te rendre sur notre "
+          },
+          "explanation": "Seul les tipeurs (donateurs) ont le droit d'acceder aux fonctionnalités VIP, pour faire un don rendez vous sur notre",
+          "features": {
+            "title": "Liste des fonctionnalités :",
+            "auto-group": {
+              "title": "Auto-Group (Wabbit ou +)",
+              "feature-1": "Suivre le meneur automatiquement",
+              "feature-2": "Création de groupe automatiquement",
+              "feature-3": "Rejoindre un combat de groupe automatiquement",
+              "feature-4": "Passer \"prêt\" en combat automatiquement"
+            },
+            "inactivity": {
+              "title": "Prolongation du délai d'inactivité (Wabbit ou +)"
+            },
+            "estimator": {
+              "title": "Estimateur des dégats des sorts en combat (Wabbit ou +)"
+            },
+            "health-bar": {
+              "title": "Affichage des barres de vies en dessous des combattants (Grand Pa Wabbit ou +)"
+            },
+            "multi-account": {
+              "title": "Possibilité d'enregistrer ces comptes par fenêtre et onglet avec connexion automatique (Grand Pa Wabbit ou +)"
+            }
+          }
+        },
+        "authentication": {
+          "open-prompt": "Activar mi zona VIP",
+          "already-donator": "Ya donante?",
+          "prompt": {
+            "title": {
+              "write-code": "Introduzca su código VIP",
+              "error": "Código VIP no válido",
+              "success": "Muchas gracias !"
+            },
+            "button": {
+              "send-code": "Mandar",
+              "cancel": "Anular",
+              "stand-here": "Permanecer allí",
+              "reboot": "Reiniciar ahora"
+            },
+            "text": {
+              "empty-code": "Debe introducir un código!",
+              "bad-code": "El código introducido no es un código válido.",
+              "success": "<br/>Su cuenta VIP <b>{{value1}}</b> se ha activado ! <br/><br/>Debe reiniciar la aplicación para aprovechar las nuevas características."
+            }
+          }
+        },
+        "general": {
+          "header": "Général",
+          "disable-inactivity": "Prolongé le délai avant la deconnexion pour inactivité",
+          "health-bar": "Activer l'affichage des barres de vie en-dessous des combatants",
+          "health-bar-shortcut": "Raccourcis afficher/masquer barres de vie",
+          "estimator": "Activer l'estimation des dégats des sorts en combat"
+        },
+        "auto-group": {
+          "header": "Grupo auto",
+          "active": "Habilitar agrupación automática",
+          "warning": "Atención agrupación automática puede ser considerado como un bot para los otros jugadores, lo utilizan con moderación y en las zonas despobladas.",
+          "explanation-1": "Los personajes del grupo deben ser amigos con el líder de la invitación a ser automática.",
+          "explanation-2": "Los miembros siguen el líder si está en la misma tarjeta.",
+          "leader": "Nombre del jefe",
+          "members": "Nombres de los personajes",
+          "members-add": "Añadir un personaje",
+          "follow-leader": "Seguir al líder",
+          "ready": "Préstamo de auto.",
+          "fight": "Batalla de entrada auto.",
+          "delay": "Tiempo antes de seguir (en segundos)",
+          "random-move": "Pasando cuadrados adyacentes"
+        },
+        "multi-account": {
+          "home-no-master": "Para utilizar esta función, una contraseña debe configurarse. Se utiliza para iniciar DofusTouchNE con varias cuentas de automatización.",
+          "header": "Múltiples cuentas",
+          "active": "Habilitar múltiples cuentas",
+          "window": "Ventana",
+          "delete-window": "Quitar",
+          "add-window": "Añadir ventana",
+          "add": "Añadir cuenta",
+          "account-name": "Login",
+          "password": "Contraseña",
+          "modify_password": "Cambiar la contraseña",
+          "configure_password": "Configurar la contraseña",
+          "request-master-password": {
+            "explanation": "Para acceder a la gestión de sus cuentas, primero debe introducir su contraseña. Esta contraseña se define en la primera activación de varias cuentas.",
+            "label": "Introduzca su contraseña",
+            "bad": "La contraseña es incorrecta",
+            "confirm": "Continuar",
+            "ignore-step": "Omita este paso"
+          },
+          "prompt": {
+            "add-master": {
+              "title": "Configuración de la contraseña",
+              "confirm": "Registro",
+              "cancel": "Anular",
+              "min-lenght": "La contraseña debe contener al menos {{ lenght }} caracteres de longitud",
+              "success-text": "La contraseña que tendrá que iniciar la aplicación ahora"
+            },
+            "edit-master": {
+              "title": "Cambio de contraseña",
+              "input-old-placeholder": "Antigua contraseña",
+              "input-new-placeholder": "Nueva contraseña",
+              "confirm": "Registro",
+              "cancel": "Anular",
+              "min-lenght": "La nueva contraseña debe contener al menos {{ lenght }} caracteres de longitud",
+              "incorrect-old": "La antigua contraseña es incorrecta",
+              "success-text": "La contraseña se ha cambiado."
+            },
+            "maximum-account": {
+              "title": "Uy !",
+              "text": "Puede guardar siendo más de 4 cuentas el rango de Wabbit donante.",
+              "confirm": "Aumentar mi rango VIP",
+              "cancel": "He entendido"
+            },
+            "add-account": {
+              "title": "Añadir cuenta",
+              "input-login-placeholder": "Login",
+              "input-password-placeholder": "Contraseña",
+              "confirm": "Registro",
+              "cancel": "Anular",
+              "min-lenght-login": "El login debe contener al menos 1 carácter",
+              "min-lenght-password": "El contraseña debe contener al menos 1 carácter"
+            },
+            "edit-account": {
+              "title": "Edición de una cuenta",
+              "input-login-placeholder": "Login",
+              "input-password-placeholder": "Contraseña",
+              "confirm": "Registro",
+              "cancel": "Anular",
+              "min-lenght-login": "El login debe contener al menos 1 carácter",
+              "min-lenght-password": "El contraseña debe contener al menos 1 carácter"
+            }
+          }
+        },
+        "status": {
+          "header": "Estatus VIP"
+        }
+      },
+      "general": {
+        "title": "General",
+        "language": "Idioma",
+        "resolution": "Resolución de la ventana",
+        "hide-shop": "Ocultar el botón Shop",
+        "hide-tab": "Ocultar la barra de tareas multicuentas",
+        "local-content": "Habilitar descargar mapas locales (beta)"
+      },
+      "shortcuts": {
+        "title": "Atajos",
+        "description1": "Puede utilizar teclas especiales : <strong>ctrl</strong>, <strong>shift</strong>, <strong>space</strong>, <strong>alt</strong> (ctrl = cmd en Macintosh OS X)",
+        "description2": "Para conseguir sus atajos simplemente empuja la combinación de teclas deseada, después de hacer un clic en el campo",
+        "diver": {
+          "header": "Diverso",
+          "end-turn": "Saltar su torno (combate)",
+          "open-chat": "Abrir el chat"
+        },
+        "interfaces": {
+          "header": "Interfaces",
+          "carac": "Personaje",
+          "spell": "Hechizos",
+          "bag": "Inventario",
+          "bidhouse": "Mercadillo",
+          "map": "Mapa",
+          "friend": "Amigos",
+          "book": "Misiones",
+          "guild": "Gremio",
+          "conquest": "Koliseo",
+          "goultine": "Tienda",
+          "job": "Oficios",
+          "alliance": "Alianza",
+          "mount": "Montura",
+          "directory": "Repertorio de gremio y alianza",
+          "alignement": "Alineamiento",
+          "bestiary": "Bestiario",
+          "title": "Titulo y ornamentos",
+          "achievement": "Logros",
+          "almanax": "Almanax",
+          "spouse": "Cónyuge",
+          "shop": "Mercante"
+        },
+        "items": {
+          "header": "Objetos",
+          "slot": "Localización {{x}}"
+        },
+        "no-emu": {
+          "header": "No-Emu",
+          "new-window": "Nueva ventana",
+          "new-tab": "Nueva Pestaña",
+          "tab": "Lengüeta {{x}}",
+          "next-tab": "Pestaña siguiente ",
+          "prev-tab": "Pestaña anterior"
+        },
+        "spells": {
+          "header": "Hechizos",
+          "slot": "Localización {{x}}"
+        }
+      },
+      "notifications": {
+        "title": "Notificacións",
+        "description": "Puede recibir las notificaciones del juego Dofus cuando esta en otra applicación. Puede ser notificado :",
+        "fight-turn": "Al inicio del torno (combate)",
+        "private-message": "A la llegada de un mensaje privado",
+        "tax-collector": "When a tax collector is attacked",
+        "kolizeum": "When kolizeum fight is find"
+      },
+      "reset": "Reiniciar",
+      "save": "Validar",
+      "prompt": {
+        "reset-option": {
+          "text": "Al continuar, todos los ajustes se reiniciarán.<br/>Esta operación no es reversible."
+        },
+        "change-resolution": {
+          "text": "La nueva resolución se aplicará en el siguiente reinicio."
+        }
+      }
+    },
+    "prompt": {
+      "title": {
+        "confirm": "Se requiere confirmación",
+        "warning": "Atención !",
+        "success": "Éxito!",
+        "error": "Error en la operación!",
+        "info": "Información"
+      },
+      "button": {
+        "cancel": "Anular",
+        "confirm": "Confirmo",
+        "close": "Cerrar"
+      }
+    }
+  },
+  "update": {
+    "title": "Actualización",
+    "information": {
+      "error": "No se puede descargar la actualización! Por favor, inténtelo de nuevo otra vez=",
+      "install": "Instalación de la actualización...",
+      "start": "Inicio del descarga..."
+    }
+  }
+}
